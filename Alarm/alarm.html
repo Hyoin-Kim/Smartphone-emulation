@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css"/>
+    <title>SmartPhone Emulation</title>
+</head>
+<body>
+    <div>
+        <button onclick="location.href='../index.html'">Back</button>
+        <span id="nowTimes"></span>
+        <button onclick="showInput();">New</button>
+    </div>
+    <div id="timeSettingWrap" style="display: none;">
+        <div id='timeResult'>오전</div>
+        <div class="alarmButton">
+            <input class="plus-minusButton" type="button" onclick='timeSetting("plus")' value="+"/>
+            <input class="plus-minusButton" type="button" onclick='timeSetting("minus")' value="-"/>
+        </div>
+        <div id='hourResult'>00</div>
+        <div class="alarmButton">
+            <input class="plus-minusButton" type="button" onclick='hourSetting("plus")' value="+"/>
+            <input class="plus-minusButton" type="button" onclick='hourSetting("minus")' value="-"/>
+        </div>
+        <p class="time">시</p>
+        <div id='minResult'>00</div>
+        <div class="alarmButton">
+            <input class="plus-minusButton" type="button" onclick='minSetting("plus")' value="+"/>
+            <input class="plus-minusButton" type="button" onclick='minSetting("minus")' value="-"/>
+        </div>
+        <p class="time">분</p>
+        <button id="add-btn">저장</button>
+    </div>
+
+    <section>
+        <div class="container">
+            <hr>
+            <div id="alarms">
+                <div class="alarm">
+                    <p class="alarm-count">오전 11시 20분</p>
+                    <button class="delete">삭제</button>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../app.js"></script>
+    <script src="alarm.js"></script>
+</body>
+</html>
