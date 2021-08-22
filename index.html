@@ -4,17 +4,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/alarm.css"/>
+    <link rel="stylesheet" href="css/memo.css"/>
+    <link rel="stylesheet" href="css/album.css"/>
     <title>SmartPhone Emulation</title>
-    <script src="app.js">
-    </script>
 </head>
 <body>
-    <span id="nowTimes"></span>
-    <div>
-        <button class="appButton" onclick="location.href='Alarm/alarm.html'"> 알람 </button>
-        <button class="appButton" onclick="location.href='Memo/memo.html'"> 메모 </button>
-        <button class="appButton" onclick="location.href='Album/album.html'"> 사진 </button>
+    <div class="header">
+        <span id="nowTimes"></span>
     </div>
+    <div id="page-container">
+        <div class="bucket" ondragover="allowDrop();" ondrop="dropItem(event);">
+            <button class="appButton" id="alarm" onclick="getPage('alarm');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">알람</button>
+            <button class="appButton" id="memo" onclick="getPage('memo');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">메모</button>
+            <button class="appButton" id="album" onclick="getPage('album');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">사진</button>
+        </div>
+    </div>
+    
+    <template id="template-alarm">
+        <div>
+            <button class="headerButton" onclick="getPage('menu');">Back</button>
+            <button class="headerButton" onclick="showInputAlarm();">New</button>
+        </div>
+    
+        <header id="timeSettingWrap" style="display: none;">
+            <div id='timeResult'>오전</div>
+            <div class="alarmButton">
+                <input class="plus-minusButton" type="button" onclick='timeSetting("plus")' value="+"/>
+                <input class="plus-minusButton" type="button" onclick='timeSetting("minus")' value="-"/>
+            </div>
+            <div id='hourResult'>00</div>
+            <div class="alarmButton">
+                <input class="plus-minusButton" type="button" onclick='hourSetting("plus")' value="+"/>
+                <input class="plus-minusButton" type="button" onclick='hourSetting("minus")' value="-"/>
+            </div>
+            <p class="time">시</p>
+            <div id='minResult'>00</div>
+            <div class="alarmButton">
+                <input class="plus-minusButton" type="button" onclick='minSetting("plus")' value="+"/>
+                <input class="plus-minusButton" type="button" onclick='minSetting("minus")' value="-"/>
+            </div>
+            <p class="time">분</p>
+            <button id="add-btn" onclick="addAlarm();">저장</button>
+        </header>
+        <section>
+            <div class="container">
+                <hr class="hr">
+                <div id="alarms">
+                    <div class="alarm">
+                        <p class="alarm-count">Alarm ${index + 1}</p>
+                        <p type="button" class="alarm-text"> $element.alarmTime $element.alarmHour시 $element.alarmMinute분</p>
+                        <button class="delete-btn" onclick="deleteAlarm(this);">삭제</button>
+                        <hr class="hr">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+    
+    <template id="template-memo">
+        <div>
+            <button class="headerButton" onclick="getPage('menu');">Back</button>
+            <button class="headerButton" onclick="showInput();">New</button>
+        </div>
+        <header>
+            <div class="memo-box">
+                <input id="memo-input" placeholder="메모를 입력하세요" style="display: none;" onchange="addMemo();">
+            </div>
+        </header>
+    
+        <section>
+            <div class="container">
+                <hr class="hr">
+                <div id="memos">
+                    <div class="memo">
+                        <p class="memo-count">Memo ${index + 1}</p>
+                        <p type="button" class="memo-text" onclick="showDetail(this);"> $element.text</p>
+                        <p class="memo-text-detail" style="display: none;"> $element.text</p>
+                        <hr class="hr">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+
+    <template id="template-album">
+        <div>
+            <button class="headerButton" onclick="getPage('menu');">Back</button>
+        </div>
+        <div class="container">
+            <div id="tab">
+                <ul>
+                    <li><img id="imageFile" src="./Image/image01.jpg" alt='' onclick="expandImage(this);"/></li>
+                    <li><img id="imageFile" src="./Image/image02.jpg" alt='' onclick="expandImage(this);"/></li>
+                    <li><img id="imageFile" src="./Image/image03.jpg" alt='' onclick="expandImage(this);"/></li>
+                    <li><img id="imageFile" src="./Image/image04.jpg" alt='' onclick="expandImage(this);"/></li>
+                    <li><img id="imageFile" src="./Image/image05.jpg" alt='' onclick="expandImage(this);"/></li>
+                    <li><img id="imageFile" src="./Image/image06.jpg" alt='' onclick="expandImage(this);"/></li>
+                    <li><img id="imageFile" src="./Image/image07.jpg" alt='' onclick="expandImage(this);"/></li>
+                    <li><img id="imageFile" src="./Image/image08.jpg" alt='' onclick="expandImage(this);"/></li>
+                    <li><img id="imageFile" src="./Image/image09.jpg" alt='' onclick="expandImage(this);"/></li>
+                    <li><img id="imageFile" src="./Image/image10.jpg" alt='' onclick="expandImage(this);"/></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="container">
+            <img id="expandedImg">
+        </div>
+    </template>
+
+    <template id="template-menu">
+        <div class="bucket" ondragover="allowDrop();" ondrop="dropItem(event);">
+            <button class="appButton" id="alarm" onclick="getPage('alarm');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">알람</button>
+            <button class="appButton" id="memo" onclick="getPage('memo');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">메모</button>
+            <button class="appButton" id="album" onclick="getPage('album');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">사진</button>
+        </div>
+    </template>
+
+    <script src="app.js"></script>
+    <script src="./components/Alarm/alarm.js"></script>
+    <script src="./components/Memo/memo.js"></script>
+    <script src="./components/Album/album.js"></script>
 </body>
 </html>
