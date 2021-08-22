@@ -1,0 +1,30 @@
+#imageFile{
+    height: 60px;
+    width: 60px;
+    margin : 10px;
+    border-radius: 10px; 
+    cursor:pointer;
+    white-space:nowrap;
+    border-style: solid;
+}
+
+#expandedImg{
+    height: 400px;
+    width: 100%;
+    margin : 10px;
+    border-radius: 10px; 
+    cursor:pointer;
+    white-space:nowrap;
+    border : none;
+    object-fit: contain;
+    background-color: black;
+}
+
+#tab ul{
+    white-space:nowrap; 
+    overflow-x: auto; text-align:center
+}
+
+#tab ul li{
+    display:inline-block;
+}

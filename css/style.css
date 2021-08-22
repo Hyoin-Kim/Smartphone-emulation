@@ -1,0 +1,49 @@
+body {
+    background-color:#5692ca;
+    color : #ffffff;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+}
+.header{
+    margin: 30px 0px 20px 0px;
+}
+
+.headerButton{
+    border:none;
+    background-color: #ffffff;
+    color : blue;
+    width: 50px;
+    height: 30px;
+    margin: 0px 90px 10px 90px;
+    cursor: pointer;
+}
+
+#nowTimes {
+    color : #ffffff;
+}
+
+.appButton {
+    color : #000000;
+    margin : 30px 20px 20px 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border : none;
+    cursor:pointer;
+}
+
+.appButton.is-dragging{
+    background-color: #81DAF5;
+}
+
+.alarmButton{
+    display: inline-grid;
+}
+
+.hr{
+    margin:0px;
+}
+
+
+
+

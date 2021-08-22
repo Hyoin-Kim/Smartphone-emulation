@@ -1,0 +1,55 @@
+#hourResult{
+    display: contents;
+    color:#000000;
+}
+
+#minResult{
+    display: contents;
+    color:#000000;
+}
+
+#timeResult{
+    display: contents;
+    color:#000000;
+}
+
+.plus-minusButton{
+    background-color: #ffffff;
+    border-width: inherit;
+    margin:2px;
+    cursor:pointer;
+}
+
+#timeSettingWrap{
+    margin-top:20px;
+    background-color: #b8faf4;
+}
+
+.time{
+    color:#000000;
+    display: contents;
+}
+
+.alarm-text{
+    display: inline-block;
+}
+
+.delete-btn{
+    display: inline-block;
+    width:50px;
+    height:30px;
+    background-color: #ffffff;
+    color: #412a00;
+    border:none;
+    cursor: pointer;
+}
+
+#add-btn{
+    background-color: #ffffff;
+    border-width: inherit;
+    color:#0000ff;
+}
+
+#alarms{
+    padding-top: 20px;
+}
