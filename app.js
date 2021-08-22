@@ -1,71 +1,53 @@
-    document.addEventListener("DOMContentLoaded", function() {
-        realTimer();
-        setInterval(realTimer, 500);
-    });
-
-    function realTimer() {
-        const nowDate = new Date();
-        const year = nowDate.getFullYear();
-        const month= nowDate.getMonth() + 1;
-        const date = nowDate.getDate();
-        const hour = nowDate.getHours();
-        const min = nowDate.getMinutes();
-        const second = nowDate.getSeconds();
-        document.getElementById("nowTimes").innerHTML = 
-    year + "년 " + addTimeZero(month) + "월 " + addTimeZero(date) + "일 " + hour + "시 " + addTimeZero(min) + "분 " + addTimeZero(second) + "초";
-
-    }
-
-    function addTimeZero(num) {
-        if(num < 10) { num = "0" + num; }
-        return num;
-    }
-
-    function timeSetting(type){
-        const timeResultElement = document.getElementById('timeResult');
-        let time = timeResultElement.innerText;
-
-        if(type ==='plus'){
-            time = '오후';
-        }else if(type ==='minus'){
-            time = '오전';
-        }
-        timeResultElement.innerText = time; 
-    }
-
-    function hourSetting(type){
-        const hourResultElement = document.getElementById('hourResult');
-        let hour = hourResultElement.innerText;
-
-        if(type === 'plus'){
-            hour = parseInt(hour) + 1;
-        }else if(type === 'minus'){
-            hour = parseInt(hour) - 1;
-        }
-
-        if(hour >12){
-            hour = 1;
-        }else if(hour<1){
-            hour = 12;
-        }
-        hourResultElement.innerText = addTimeZero(hour); 
-    }
-
-    function minSetting(type)  {
-        const resultElement = document.getElementById('minResult');
-        let minute = resultElement.innerText;
-        
-        if(type === 'plus') {
-            minute = parseInt(minute) + 1;
-        }else if(type === 'minus')  {
-            minute = parseInt(minute) - 1;
-        }
-
-        if(minute >59){
-            minute = 1;
-        }else if(minute<1){
-            minute = 59;
-        }
-        resultElement.innerText = addTimeZero(minute);
+    function getPage(type) {
+      if(type === "alarm"){ 
+        var template = document.getElementById("template-alarm").innerHTML;
+        document.getElementById("page-container").innerHTML = template;
+        showAlarms();
+      }else if(type === "memo"){
+        var template = document.getElementById("template-memo").innerHTML;
+        document.getElementById("page-container").innerHTML = template;
+        showMemos();
+      }else if(type === "album"){
+        var template = document.getElementById("template-album").innerHTML;
+        document.getElementById("page-container").innerHTML = template;
+      }else if(type === "menu"){
+        var template = document.getElementById("template-menu").innerHTML;
+        document.getElementById("page-container").innerHTML = template;
       }
+    }
+
+    function allowDrop() {
+        event.preventDefault();
+      };
+      
+      function dropItem() {
+        let targetEle = event.target;
+        let id = event.dataTransfer.getData('text');
+        let moveElement = document.getElementById(id);
+        targetEle.before(moveElement);
+      };
+      
+      function dragStart() {
+        let thisElement = event.target;
+        let thisId = thisElement.id;
+        thisElement.classList.add('is-dragging');
+        event.dataTransfer.setData('text/plain', thisId);
+      };
+      
+      function dragEnd() {
+        let thisElement = event.target;
+        thisElement.classList.remove('is-dragging');
+      };
+
+      //드래그앤 드롭 로컬스토리지 저장
+      let drag = localStorage.getItem("appbutton");
+
+      if (drag===null) {
+        memosObj = [];
+        console.log("null",memosObj);
+      } else {
+        memosObj = JSON.parse(memos);
+        console.log(memosObj);
+      } 
+
 
