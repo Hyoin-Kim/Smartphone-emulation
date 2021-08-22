@@ -8,5 +8,21 @@
 - Home (메뉴) 페이지 </br>
 - 알람 페이지 </br>
 - 메모 페이지 </br>
-- 앨범 페이지 </br>
+- 앨범 페이지 </br></br>
+<h2>파일 구조</h2>
 
+```
+└─Smartphone-emulation
+    ├─components
+    │  ├─Alarm─alarm.js
+    │  ├─Album─album.js
+    │  └─Memo─memo.js
+    ├─css
+    │  ├─alarm.css
+    │  ├─album.css
+    │  ├─memo.css
+    │  └─style.css
+    ├─image
+    ├─index.html
+    └─app.js
+```
