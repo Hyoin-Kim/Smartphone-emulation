@@ -104,12 +104,11 @@ function showInputAlarm(){
 }
 
 
-//로컬스토리지에 알람 추가
 let addBtn = document.getElementById("add-btn");
 
+//로컬 저장소에 알람 추가
 function addAlarm(){
     document.getElementById("timeSettingWrap").style.display="none";
-
     let addTime = document.getElementById("timeResult");
     let addHour = document.getElementById("hourResult");
     let addMinute = document.getElementById("minResult");
@@ -151,7 +150,7 @@ function showAlarms(){
               <button class="delete-btn" id="${index}" onclick="deleteAlarm(this.id);">삭제</button>
               <hr class="hr">
           </div>
-              `;
+        `;
     });
 
     //빈 값일 경우
@@ -161,7 +160,6 @@ function showAlarms(){
     } else {
         alarmsElm.innerHTML = `알람창이 비워있습니다. 설정하여 채워보세요!`;
     }
-
 }
 
 //알람 삭제 함수
@@ -183,15 +181,15 @@ function deleteAlarm(index) {
 
 //알람 울릴시, alert후 삭제 함수
 function deleteRingAlarm(index) {
-        let alarms = localStorage.getItem("alarms");
-        if (alarms == null) {
-            alarmsObj = [];
-        } else {
-            alarmsObj = JSON.parse(alarms);
-        }
+    let alarms = localStorage.getItem("alarms");
+    if (alarms == null) {
+        alarmsObj = [];
+    } else {
+        alarmsObj = JSON.parse(alarms);
+    }
 
-        alarmsObj.splice(index, 1);
-        localStorage.setItem("alarms", JSON.stringify(alarmsObj));
-        showAlarms();
+    alarmsObj.splice(index, 1);
+    localStorage.setItem("alarms", JSON.stringify(alarmsObj));
+    showAlarms();
 }
 
