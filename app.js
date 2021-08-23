@@ -1,32 +1,32 @@
-var alarmButton = '<button class="appButton" id="alarm" onclick="getPage(\'alarm\');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">알람</button>';
-var memoButton = '<button class="appButton" id="memo" onclick="getPage(\'memo\');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">메모</button>';
-var albumButton = '<button class="appButton" id="album" onclick="getPage(\'album\');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">사진</button>';
+let alarmButton = '<button class="appButton" id="alarm" onclick="getPage(\'alarm\');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">알람</button>';
+let memoButton = '<button class="appButton" id="memo" onclick="getPage(\'memo\');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">메모</button>';
+let albumButton = '<button class="appButton" id="album" onclick="getPage(\'album\');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">사진</button>';
 
 function getPage(type) {
     localStorage.setItem("page",type);
     if(type === "alarm"){ 
-        var template = document.getElementById("template-alarm").innerHTML;
+        let template = document.getElementById("template-alarm").innerHTML;
         document.getElementById("page-container").innerHTML = template;
         showAlarms();
     }else if(type === "memo"){
-        var template = document.getElementById("template-memo").innerHTML;
+        let template = document.getElementById("template-memo").innerHTML;
         document.getElementById("page-container").innerHTML = template;
         showMemos();
     }else if(type === "album"){
-        var template = document.getElementById("template-album").innerHTML;
+        let template = document.getElementById("template-album").innerHTML;
         document.getElementById("page-container").innerHTML = template;
     }else if(type === "menu"){
-        var template = document.getElementById("template-menu").innerHTML;
+        let template = document.getElementById("template-menu").innerHTML;
         document.getElementById("page-container").innerHTML = template;
         checkMenuState();
     }
 }
 
-//Drog & Drop 로컬스토리지 저장
+//Drog & Drop 로컬 저장소에 저장
 function checkMenuState(){
-    var menu = localStorage.getItem("menu");
-    if(menu === null || menu === undefined){ //로컬스토리지에 menu값이 null이거나 undefined일때
-        var menu = ["alarm","memo","album"];
+    let menu = localStorage.getItem("menu");
+    if(menu === null || menu === undefined){ //로컬 저장소에 menu값이 null이거나 undefined일때
+        let menu = ["alarm","memo","album"];
         localStorage.setItem("menu",JSON.stringify(menu));
     }else{
         menu = JSON.parse(menu);
@@ -43,7 +43,7 @@ function checkMenuState(){
 }
 
 function checkPage(){
-    var page = localStorage.getItem("page");
+    let page = localStorage.getItem("page");
     if(page !== undefined && page !== null){
         getPage(page);
     }else{
