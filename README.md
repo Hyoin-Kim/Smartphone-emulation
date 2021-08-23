@@ -38,10 +38,10 @@
 ![Animation07](https://user-images.githubusercontent.com/45025551/130398355-cd1fcada-86f7-420a-9e30-ce2700ddf297.gif) </br>
 - 알람 삭제 </br>
 ![Animation08](https://user-images.githubusercontent.com/45025551/130398359-cc59b5ec-0d1b-413a-aac4-a7ce753e2b26.gif) </br>
-- 알람 alert(알람앱 화면) -> 오후 3시 10분 알람 </br>
-![Animation09](https://user-images.githubusercontent.com/45025551/130398816-dc18648c-3745-4a9a-9322-236a72f725e8.gif) </br>
-- 알람 alert(알람앱 외에 다른 화면) -> 오후 6시 40분 알람 </br>
-![Animation11](https://user-images.githubusercontent.com/45025551/130426358-6e19dbde-5e04-443b-b38b-57e3843fc2d7.gif) </br>
+- 알람 alert(알람앱 화면) 알람시간 띄워주기 -> 오후 11시 50분 알람 </br>
+![Animation13](https://user-images.githubusercontent.com/45025551/130468346-15ef23d9-c511-4105-8b92-436296734b5f.gif) </br>
+- 알람 alert(알람앱 외에 다른 화면) 알람시간 띄워주기 -> 오후 11시 49분 알람(촬영을 위한 1분단위 측정) </br>
+![Animation12](https://user-images.githubusercontent.com/45025551/130468311-4501a2fe-652d-417f-8cf2-47e2a872f7e1.gif) </br>
 
 
 
