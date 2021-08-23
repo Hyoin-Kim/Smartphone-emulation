@@ -13,7 +13,7 @@ function realTimer() {
     const min = nowDate.getMinutes();
     const second = nowDate.getSeconds();
     document.getElementById("nowTimes").innerHTML = 
-year + "년 " + addTimeZero(month) + "월 " + addTimeZero(date) + "일 " + hour + "시 " + addTimeZero(min) + "분 " + addTimeZero(second) + "초";
+    year + "년 " + addTimeZero(month) + "월 " + addTimeZero(date) + "일 " + hour + "시 " + addTimeZero(min) + "분 " + addTimeZero(second) + "초";
 
     let alarms = localStorage.getItem("alarms");
     if(alarms == null){
@@ -26,29 +26,19 @@ year + "년 " + addTimeZero(month) + "월 " + addTimeZero(date) + "일 " + hour 
         let compareTime;
         let compareHour=0;
         let compareMin=0;
-        // console.log("getAlarm",element.alarmTime);
-        // console.log("getAlarm",element.alarmHour);
-        // console.log("getAlarm",element.alarmMinute);
         if(hour>12){
             compareTime = '오후';
             compareHour = addTimeZero(hour-12).toString();
             compareMin = addTimeZero(min).toString();
-            // console.log("오후오전시간",compareTime);
-            // console.log("시간",compareHour);
-            // console.log("분",compareMin);
         }else{
             compareTime = '오전';
-            compareHour = addTimeZero(hour);
-            compareMin = addTimeZero(min);
+            compareHour = addTimeZero(hour).toString();
+            compareMin = addTimeZero(min).toString();
         }
 
         if(compareTime === element.alarmTime && compareHour === element.alarmHour && compareMin === element.alarmMinute){
-            console.log("올바릅니다.");
             alert("알람이 켜졌습니다.");
             deleteRingAlarm(index);
-
-        }else{
-            console.log("다릅니다.");
         }
     });
 }
@@ -103,7 +93,7 @@ function minSetting(type)  {
 
     if(minute >59){
         minute = 0;
-    }else if(minute<1){
+    }else if(minute<0){
         minute = 50;
     }
     resultElement.innerText = addTimeZero(minute);
@@ -123,7 +113,6 @@ function addAlarm(){
     let addTime = document.getElementById("timeResult");
     let addHour = document.getElementById("hourResult");
     let addMinute = document.getElementById("minResult");
-    console.log(addTime,addHour,addMinute);
 
     let alarms = localStorage.getItem("alarms");
     if (alarms == null){
@@ -152,7 +141,7 @@ function showAlarms(){
         alarmsObj = JSON.parse(alarms);
     }
 
-//로컬 저장소에 저장된 값을 보여줌
+    //로컬 저장소에 저장된 값을 보여줌
     let newAlarm = "";
     alarmsObj.forEach(function(element, index) { //노트가 추가될때마다 foreach문으로 추가
         newAlarm += `
@@ -184,7 +173,6 @@ function deleteAlarm(index) {
             alarmsObj = [];
         } else {
             alarmsObj = JSON.parse(alarms);
-            console.log("삭제되었는지 여부",alarmsObj);
         }
 
         alarmsObj.splice(index, 1);
@@ -200,7 +188,6 @@ function deleteRingAlarm(index) {
             alarmsObj = [];
         } else {
             alarmsObj = JSON.parse(alarms);
-            console.log("삭제되었는지 여부",alarmsObj);
         }
 
         alarmsObj.splice(index, 1);
