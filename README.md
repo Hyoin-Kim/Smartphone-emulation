@@ -17,8 +17,10 @@
 - 3개의 앱 표시
 - Drag & Drop 서로 위치 이동 가능
 - 각 앱 선택시 해당 앱 화면으로 변경
+- 변경된 앱 위치 LocalStorage 저장 
 ```
-![Animation01](https://user-images.githubusercontent.com/45025551/130390720-ff46c219-d838-4229-9d36-b796fd5ada8d.gif)
+![Animation10](https://user-images.githubusercontent.com/45025551/130417217-f9dca3ee-d457-4cb0-b1fa-bfd8c5f85850.gif)
+
 
 2. 알람 페이지 </br>
 ```
@@ -43,7 +45,7 @@
 - New 버튼 클릭시 입력창 생성
 - input 태그 사용 및 엔터키 입력시 저장후, 입력창 사라짐
 - 메모 리스트 2줄 표시
-- 해당 메모 클릭시 모든 메모 내용 출력
+- 해당 메모 클릭시 메모의 모든 내용 출력
 - 한번에 하나의 메모만 펼쳐질 수 있도록 출력
 - 모든 메모 LocalStorage 저장
 ```
@@ -82,6 +84,8 @@
 ```
 
 <h2> 실행 방법 </h2>
+- git clone https://github.com/Hyoin-Kim/Smartphone-emulation.git </br>
+- 압축 풀기 </br>
 - 파일 index.html 실행
 
 <h2> Code Convention </h2>
@@ -93,5 +97,4 @@
 [Style] 스타일 수정
 [Etc] 기타 
 ✅ 한글로 Commit
-
 ```
