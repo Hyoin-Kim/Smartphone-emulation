@@ -19,7 +19,8 @@
 - 각 앱 선택시 해당 앱 화면으로 변경
 - 변경된 앱 위치 LocalStorage 저장 
 ```
-![Animation10](https://user-images.githubusercontent.com/45025551/130417217-f9dca3ee-d457-4cb0-b1fa-bfd8c5f85850.gif)
+- Drag & Drop </br>
+![Animation10](https://user-images.githubusercontent.com/45025551/130417217-f9dca3ee-d457-4cb0-b1fa-bfd8c5f85850.gif) 
 
 
 2. 알람 페이지 </br>
@@ -33,9 +34,15 @@
 - 다른 앱(메뉴, 메모, 앨범) 에 있어도 알람 동작 구현
 - 모든 알람 리스트 LocalStorage 저장
 ```
-![Animation07](https://user-images.githubusercontent.com/45025551/130398355-cd1fcada-86f7-420a-9e30-ce2700ddf297.gif)
-![Animation08](https://user-images.githubusercontent.com/45025551/130398359-cc59b5ec-0d1b-413a-aac4-a7ce753e2b26.gif)
-![Animation09](https://user-images.githubusercontent.com/45025551/130398816-dc18648c-3745-4a9a-9322-236a72f725e8.gif)
+- 알람 생성 </br>
+![Animation07](https://user-images.githubusercontent.com/45025551/130398355-cd1fcada-86f7-420a-9e30-ce2700ddf297.gif) </br>
+- 알람 삭제 </br>
+![Animation08](https://user-images.githubusercontent.com/45025551/130398359-cc59b5ec-0d1b-413a-aac4-a7ce753e2b26.gif) </br>
+- 알람 alert(알람앱 화면) -> 오후 3시 10분 알람 </br>
+![Animation09](https://user-images.githubusercontent.com/45025551/130398816-dc18648c-3745-4a9a-9322-236a72f725e8.gif) </br>
+- 알람 alert(알람앱 외에 다른 화면) -> 오후 6시 40분 알람 </br>
+![Animation11](https://user-images.githubusercontent.com/45025551/130426358-6e19dbde-5e04-443b-b38b-57e3843fc2d7.gif) </br>
+
 
 
 
@@ -49,9 +56,10 @@
 - 한번에 하나의 메모만 펼쳐질 수 있도록 출력
 - 모든 메모 LocalStorage 저장
 ```
-
-![Animation04](https://user-images.githubusercontent.com/45025551/130392785-a30e25d7-6009-415b-95eb-52ac820832f6.gif)
-![Animation05](https://user-images.githubusercontent.com/45025551/130392790-6b8209ae-0f9a-4130-80af-385a2da791b3.gif)
+- 노트 생성 </br>
+![Animation04](https://user-images.githubusercontent.com/45025551/130392785-a30e25d7-6009-415b-95eb-52ac820832f6.gif) </br>
+- 노트 상세 열기 </br>
+![Animation05](https://user-images.githubusercontent.com/45025551/130392790-6b8209ae-0f9a-4130-80af-385a2da791b3.gif) </br>
 
 
 4. 앨범 페이지 </br>
@@ -61,6 +69,7 @@
 - 해당 사진 선택시 Border을 통해 선택 표시
 - 선택된 사진 표시 및 가로 세로 중앙정렬
 ```
+- 앨범 선택 </br>
 ![Animation03](https://user-images.githubusercontent.com/45025551/130392863-fcf87293-c707-45cd-84b2-be56eff9908d.gif)
 
 
