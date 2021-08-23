@@ -1,7 +1,12 @@
 # 📱Smartphone-emulation
 
 <h2>서비스명</h2>
-[JS] Smartphone emulation Project
+<h4> [JS] Smartphone emulation Project </h4>
+- 순수 바닐라 자바스크립트로 작성 </br>
+- Chrome 최신 버전에서 동작 확인 </br>
+- 패키지 사용X </br>
+- SPA(Single Page Applicaion) 활용 </br>
+- 홈 화면과 3개의 앱 알람, 메모, 사진 총 4개의 화면으로 구성 </br>
 </br>
 
 <h2>개발 페이지 및 상세 기능</h2>
