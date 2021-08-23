@@ -30,7 +30,7 @@
 - 저장 클릭시 리스트 추가 및 입력창 사라짐
 - 알람 리스트에 삭제 클릭시 지워짐
 - 해당 알람 시간이 되면 alert창 띄워준 후 해당 알람 삭제
-- 다른 앱에 있어도 알람 동작
+- 다른 앱(메뉴, 메모, 앨범) 에 있어도 알람 동작 구현
 - 모든 알람 리스트 LocalStorage 저장
 ```
 ![Animation07](https://user-images.githubusercontent.com/45025551/130398355-cd1fcada-86f7-420a-9e30-ce2700ddf297.gif)
