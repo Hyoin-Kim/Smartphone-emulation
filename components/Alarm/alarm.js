@@ -37,7 +37,7 @@ function realTimer() {
         }
 
         if(compareTime === element.alarmTime && compareHour === element.alarmHour && compareMin === element.alarmMinute){
-            alert("알람이 켜졌습니다.");
+            alert(element.alarmTime+" "+element.alarmHour+"시 "+element.alarmMinute+"분 "+"알람이 켜졌습니다.");
             deleteRingAlarm(index);
         }
     });
