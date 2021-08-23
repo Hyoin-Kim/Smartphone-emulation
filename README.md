@@ -40,7 +40,7 @@
 ![Animation08](https://user-images.githubusercontent.com/45025551/130398359-cc59b5ec-0d1b-413a-aac4-a7ce753e2b26.gif) </br>
 - 알람 alert(알람앱 화면) 알람시간 띄워주기 -> 오후 11시 50분 알람 </br>
 ![Animation13](https://user-images.githubusercontent.com/45025551/130468346-15ef23d9-c511-4105-8b92-436296734b5f.gif) </br>
-- 알람 alert(알람앱 외에 다른 화면) 알람시간 띄워주기 -> 오후 11시 49분 알람(촬영을 위한 1분단위 측정) </br>
+- 알람 alert(알람앱 외에 다른 화면) 알람시간 띄워주기 -> 오후 11시 49분 알람(촬영을 위한 1분단위 임시측정) </br>
 ![Animation12](https://user-images.githubusercontent.com/45025551/130468311-4501a2fe-652d-417f-8cf2-47e2a872f7e1.gif) </br>
 
 
