@@ -11,15 +11,11 @@
     <title>SmartPhone Emulation</title>
 </head>
 <body>
-    <div class="header">
-        <span id="nowTimes"></span>
-    </div>
-    <div id="page-container">
-        <div class="bucket" ondragover="allowDrop();" ondrop="dropItem(event);">
-            <button class="appButton" id="alarm" onclick="getPage('alarm');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">알람</button>
-            <button class="appButton" id="memo" onclick="getPage('memo');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">메모</button>
-            <button class="appButton" id="album" onclick="getPage('album');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">사진</button>
+    <div id="app-container">
+        <div class="header">
+            <span id="nowTimes"></span>
         </div>
+        <div id="page-container"></div>
     </div>
     
     <template id="template-alarm">
@@ -118,16 +114,14 @@
     </template>
 
     <template id="template-menu">
-        <div class="bucket" ondragover="allowDrop();" ondrop="dropItem(event);">
-            <button class="appButton" id="alarm" onclick="getPage('alarm');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">알람</button>
-            <button class="appButton" id="memo" onclick="getPage('memo');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">메모</button>
-            <button class="appButton" id="album" onclick="getPage('album');" ondragstart="dragStart(event);" draggable="true" ondragend="dragEnd(event)">사진</button>
+        <div id="menu-container" class="bucket" ondragover="allowDrop();" ondrop="dropItem(event);">
+            
         </div>
     </template>
 
-    <script src="app.js"></script>
     <script src="./components/Alarm/alarm.js"></script>
     <script src="./components/Memo/memo.js"></script>
     <script src="./components/Album/album.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
