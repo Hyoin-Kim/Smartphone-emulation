@@ -43,6 +43,7 @@ function addMemo(){
       memosObj.push(myObj);
       localStorage.setItem("memos", JSON.stringify(memosObj)); //문자열로 변환해야하는 로컬 저장소
       showMemos();
+      addTxt.value=null; //input초기화
     }
   });
 }
