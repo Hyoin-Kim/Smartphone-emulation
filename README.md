@@ -9,6 +9,12 @@
 - 알람 페이지 </br>
 - 메모 페이지 </br>
 - 앨범 페이지 </br></br>
+
+![Animation01](https://user-images.githubusercontent.com/45025551/130390720-ff46c219-d838-4229-9d36-b796fd5ada8d.gif) </br>
+![Animation02](https://user-images.githubusercontent.com/45025551/130390967-87a56fe3-83a0-41fd-8bca-cc85bd4529a3.gif)
+
+
+
 <h2>파일 구조</h2>
 
 ```
