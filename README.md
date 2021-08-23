@@ -31,7 +31,10 @@
 - 다른 앱에 있어도 알람 동작
 - 모든 알람 리스트 LocalStorage 저장
 ```
-![Animation02](https://user-images.githubusercontent.com/45025551/130390967-87a56fe3-83a0-41fd-8bca-cc85bd4529a3.gif)
+![Animation07](https://user-images.githubusercontent.com/45025551/130398355-cd1fcada-86f7-420a-9e30-ce2700ddf297.gif)
+![Animation08](https://user-images.githubusercontent.com/45025551/130398359-cc59b5ec-0d1b-413a-aac4-a7ce753e2b26.gif)
+![Animation09](https://user-images.githubusercontent.com/45025551/130398816-dc18648c-3745-4a9a-9322-236a72f725e8.gif)
+
 
 
 3. 메모 페이지 </br>
@@ -47,6 +50,7 @@
 
 ![Animation04](https://user-images.githubusercontent.com/45025551/130392785-a30e25d7-6009-415b-95eb-52ac820832f6.gif)
 ![Animation05](https://user-images.githubusercontent.com/45025551/130392790-6b8209ae-0f9a-4130-80af-385a2da791b3.gif)
+
 
 4. 앨범 페이지 </br>
 ```
@@ -75,4 +79,19 @@
     ├─image
     ├─index.html
     └─app.js
+```
+
+<h2> 실행 방법 </h2>
+- 파일 index.html 실행
+
+<h2> Code Convention </h2>
+
+```
+[Feat] 기능 추가
+[Fix] 오류 수정
+[Refactor] 코드 수정
+[Style] 스타일 수정
+[Etc] 기타 
+✅ 한글로 Commit
+
 ```
